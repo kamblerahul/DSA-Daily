@@ -3,7 +3,8 @@ package com.dsa.mathematics;
 public class TrailingZero {
     public static void main(String[] args) {
         int fact = getFactorial(5);
-        System.out.println( countTrailingZero(fact));
+        System.out.println( countTrailingZero(1200));
+        System.out.println(trailingZeroEfficient(12000));
     }
 
     public static int getFactorial(int input){
@@ -22,6 +23,16 @@ public class TrailingZero {
                 count++;
             }
             input = input/10;
+        }
+        return count;
+    }
+
+    //Efficient Way
+    public static int trailingZeroEfficient(int input){
+        int count = 0;
+        for(int i=5; i<input;i=i*5){
+            input = input / 5;
+            count++;
         }
         return count;
     }
