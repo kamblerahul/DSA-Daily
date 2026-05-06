@@ -6,6 +6,7 @@ public class PrintNTo1 {
         printNTo1(5);
     }
 
+//    This is Tail recursion. As there is no condition after the recursion call
     static void printNTo1(int n){
         if(n==0)
             return;
